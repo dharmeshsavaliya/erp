@@ -48,7 +48,7 @@ use App\Http\Controllers\SimplyDutyCurrencyController;
 use App\Http\Controllers\SimplyDutyCalculationController;
 use App\Http\Controllers\MagentoCustomerReferenceController;
 use App\Http\Controllers\MagentoProblemController;
-
+use App\Http\Controllers\CreatomateController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -347,3 +347,7 @@ Route::post('/github-action', [GitHubActionController::class, 'store']);
 
 Route::post('/magento-problem', [MagentoProblemController::class, 'store']);
 Route::get('magento_modules/listing-careers', [\App\Http\Controllers\MagentoCareersController::class, 'listingApi'])->name('magento_module_listing_careers_listing_api');
+
+//creatomate video editing
+
+Route::post('/create-video', [CreatomateController::class, 'createVideo']);
